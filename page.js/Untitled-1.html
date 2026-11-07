@@ -1,0 +1,10 @@
+import Userprovider from "./context/UserContext";
+
+export default function rootlayout({ children }) {
+    return (
+        <html lang="en">
+            <body>
+                 <userProvider>
+                      {children}
+                  </UserProvider>
+                      

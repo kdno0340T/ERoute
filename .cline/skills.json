@@ -1,0 +1,42 @@
+{
+  "name": "router-itinerary-app",
+  "description": "Cline skills configuration for RoutER smart tourism application",
+  "skills": [
+    {
+      "name": "gsap-core",
+      "path": "../gsap-skills/skills/gsap-core",
+      "description": "GSAP Core API — tweens, easing, stagger, matchMedia, responsive/reduced-motion"
+    },
+    {
+      "name": "gsap-timeline",
+      "path": "../gsap-skills/skills/gsap-timeline",
+      "description": "GSAP Timelines — sequencing, position parameter, playback control"
+    },
+    {
+      "name": "gsap-scrolltrigger",
+      "path": "../gsap-skills/skills/gsap-scrolltrigger",
+      "description": "ScrollTrigger — scroll-linked animations, pinning, scrub, cleanup"
+    },
+    {
+      "name": "gsap-plugins",
+      "path": "../gsap-skills/skills/gsap-plugins",
+      "description": "GSAP Plugins — SplitText, Flip, Observer, ScrollToPlugin, etc."
+    },
+    {
+      "name": "gsap-utils",
+      "path": "../gsap-skills/skills/gsap-utils",
+      "description": "GSAP Utilities — clamp, mapRange, normalize, quickTo, snap, wrap"
+    },
+    {
+      "name": "gsap-performance",
+      "path": "../gsap-skills/skills/gsap-performance",
+      "description": "GSAP Performance — transforms over layout props, will-change, batching"
+    },
+    {
+      "name": "gsap-react",
+      "path": "../gsap-skills/skills/gsap-react",
+      "description": "GSAP React — useGSAP hook, context, cleanup, SSR safety"
+    }
+  ],
+  "llmsIndex": "../gsap-skills/skills/llms.txt"
+}

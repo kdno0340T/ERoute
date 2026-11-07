@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3e4d6">
+    <meta name="description" content="Discover the coast, uncover local favourites, and shape a thoughtful trip with RoutER.">
+    <title>RoutER — Find your kind of coast</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Roboto+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-progress" id="page-progress" aria-hidden="true"><span></span></div>
+    <div class="cursor-follower" id="cursor-follower" aria-hidden="true"><span class="cursor-orb"></span><span class="cursor-label">EXPLORE</span></div>
+    <div class="section-counter" id="section-counter" aria-hidden="true">
+      <span class="section-counter-current" id="section-counter-current">01</span>
+      <span class="section-counter-sep">/</span>
+      <span class="section-counter-total" id="section-counter-total">06</span>
+    </div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="RoutER home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand-name">Rout<span>ER</span><small>LOCAL TOURISM, THOUGHTFULLY PLANNED</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#discover">Discover</a>
+        <a class="nav-link" href="#map-section">Explore map</a>
+        <a class="nav-link" href="#planner">My itinerary <span class="nav-count" id="nav-count">0</span></a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button saved-open" id="saved-open" aria-label="Open saved trips" title="Saved trips">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.75A1.75 1.75 0 0 1 7.75 3h8.5A1.75 1.75 0 0 1 18 4.75V21l-6-3.8L6 21V4.75Z"/></svg>
+          <span class="saved-dot" id="saved-dot" hidden></span>
+        </button>
+        <button class="avatar-button" id="share-top" aria-label="Share this trip">↗</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero content-width" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> YOUR COASTAL COMPASS <span class="eyebrow-place">12°52′ N · 74°50′ E</span></div>
+          <h1 id="hero-title">Find your<br>kind of <em>coast.</em></h1>
+          <p class="hero-intro">The familiar shore, the quiet lane, the plate you’ll remember. Find the places that make Mangaluru yours.</p>
+          <div class="hero-search" role="search">
+            <label class="search-icon" for="search-input" aria-label="Search destinations"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m15.5 15.5 4.2 4.2"/></svg></label>
+            <input id="search-input" type="search" placeholder="Try “quiet beach” or “temple”" autocomplete="off">
+            <button class="search-submit" id="search-submit">Explore <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="hero-meta"><span><i class="status-dot"></i> THE MALNAD &amp; COASTAL PILOT</span><span>CURATED FOR THE CURIOUS</span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-photo" role="img" aria-label="Waves rolling onto a warm, sandy coast"></div>
+          <div class="hero-photo-shade"></div>
+          <div class="hero-stamp"><span>COASTAL<br>FIND NO. 01</span><strong>12</strong><small>PLACES TO BEGIN</small></div>
+          <div class="hero-caption"><span>01 / 04</span><span>COASTAL MOOD · ILLUSTRATIVE IMAGE</span></div>
+          <span class="hero-side-note">KARNATAKA · INDIA</span>
+        </div>
+        <div class="hero-bottom-note"><span>SCROLL TO FIND YOUR WAY</span><span class="down-mark">↓</span></div>
+      </section>
+
+      <section class="intro-strip content-width" aria-label="RoutER introduction">
+        <p>NOT JUST PLACES.<br><strong>THE FEELING OF BEING THERE.</strong></p>
+        <p class="intro-strip-copy">Build a day that flows. Find the local places between the landmarks and leave room for the unexpected.</p>
+        <a href="#discover" class="text-link">Start exploring <span aria-hidden="true">↘</span></a>
+      </section>
+
+      <section class="story-reel" id="story-reel" aria-label="A day on the coast, in three moments">
+        <div class="story-scroll-track" id="story-scroll-track">
+          <div class="story-pin">
+            <div class="story-heading"><span class="story-kicker"><i></i> A DAY, IN THREE MOMENTS</span><span class="story-instruction">KEEP SCROLLING <b aria-hidden="true">↓</b></span></div>
+            <div class="story-scenes" id="story-scenes">
+              <article class="story-scene scene-one" data-reel-scene="0" aria-hidden="false"><div class="scene-photo scene-photo-one" role="img" aria-label="Atmospheric stock image of waves"></div><div class="scene-shade"></div><div class="scene-index">01 <i></i> 03</div><div class="scene-copy"><span>START WITH THE SEA</span><h2>Take the<br>long way <em>to shore.</em></h2><p>Let the morning breathe. Find a quieter stretch of coast before the day gathers pace.</p><a class="scene-link magnetic" href="#discover" data-cursor-label="FIND A BEACH">FIND YOUR FIRST STOP <b aria-hidden="true">↗</b></a></div><div class="scene-coordinates">12°52′ N&nbsp; · &nbsp;74°50′ E</div><span class="scene-photo-note">ATMOSPHERIC STOCK IMAGE · NOT A VERIFIED DESTINATION VIEW</span></article>
+              <article class="story-scene scene-two" data-reel-scene="1" aria-hidden="true"><div class="scene-photo scene-photo-two" role="img" aria-label="Atmospheric stock image of a green forest path"></div><div class="scene-shade"></div><div class="scene-index">02 <i></i> 03</div><div class="scene-copy"><span>FOLLOW THE GREEN</span><h2>Leave room<br>for the <em>in-between.</em></h2><p>Trade the straight line for a shaded path, a temple courtyard, or a place you did not plan to find.</p><a class="scene-link magnetic" href="#discover" tabindex="-1" data-cursor-label="FIND A HIDDEN GEM">FIND A LOCAL FAVOURITE <b aria-hidden="true">↗</b></a></div><div class="scene-coordinates">COASTAL KARNATAKA&nbsp; · &nbsp;SLOW DOWN</div><span class="scene-photo-note">ATMOSPHERIC STOCK IMAGE · NOT A VERIFIED DESTINATION VIEW</span></article>
+              <article class="story-scene scene-three" data-reel-scene="2" aria-hidden="true"><div class="scene-photo scene-photo-three" role="img" aria-label="Atmospheric stock image of a late afternoon on the coast"></div><div class="scene-shade"></div><div class="scene-index">03 <i></i> 03</div><div class="scene-copy"><span>END WHERE YOU LIKE</span><h2>Stay for<br>the <em>last light.</em></h2><p>Put the day in an order that feels right, then leave a little space for the happy detour.</p><a class="scene-link magnetic" href="#planner" tabindex="-1" data-cursor-label="MAKE A DAY PLAN">SHAPE YOUR DAY <b aria-hidden="true">↗</b></a></div><div class="scene-coordinates">YOUR COAST, YOUR OWN PACE</div><span class="scene-photo-note">ATMOSPHERIC STOCK IMAGE · NOT A VERIFIED DESTINATION VIEW</span></article>
+              <div class="story-orbit orbit-a" aria-hidden="true"></div><div class="story-orbit orbit-b" aria-hidden="true"></div>
+            </div>
+            <div class="story-footer"><span id="story-caption">A little salt air to begin.</span><div class="story-progress" role="progressbar" aria-label="Story progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="story-progress-fill" id="story-progress-fill"></span></div><span class="story-step" id="story-step">01 / 03</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="discover-section content-width" id="discover" aria-labelledby="discover-title">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> MANGALURU &amp; AROUND</div>
+            <h2 id="discover-title">The coast is <em>calling.</em></h2>
+          </div>
+          <div class="section-heading-side"><span class="section-index">01 — 03</span><p>Big names, local favourites, and a few places you may have missed.</p></div>
+        </div>
+
+        <div class="discovery-layout">
+          <div class="discovery-main">
+            <div class="discovery-toolbar">
+              <div class="filter-tabs" id="filter-tabs" role="group" aria-label="Filter destinations">
+                <button class="filter-tab selected" data-category="All" aria-pressed="true">All places <span id="all-count">0</span></button>
+                <button class="filter-tab" data-category="Beach" aria-pressed="false">Coast</button>
+                <button class="filter-tab" data-category="Culture" aria-pressed="false">Culture</button>
+                <button class="filter-tab" data-category="Nature" aria-pressed="false">Nature</button>
+                <button class="filter-tab" data-category="Food" aria-pressed="false">Food &amp; market</button>
+              </div>
+              <label class="sort-control" for="sort-select">SORT <select id="sort-select"><option value="curated">Curated</option><option value="duration">Quick visits</option><option value="hidden">Hidden gems first</option></select></label>
+            </div>
+            <div class="results-line"><span id="results-label">A few good places to begin</span><span class="results-count" id="results-count" aria-hidden="true">0</span><span class="results-location"><i></i> MANGALURU, KA</span></div>
+            <div class="destination-grid" id="destination-grid" aria-live="polite"></div>
+            <div class="no-results" id="no-results" hidden><span class="no-results-icon">⌕</span><h3>No places found yet.</h3><p>Try another search or choose a different category.</p><button class="text-button" id="clear-filters">Clear filters <span>↗</span></button></div>
+            <div class="load-more-row"><span>MORE COAST, LESS CHECKLIST.</span><button class="outline-button" id="show-all">Show all places <span>↗</span></button></div>
+          </div>
+
+          <aside class="planner-card" id="planner" aria-labelledby="planner-title">
+            <div class="planner-topline"><span>YOUR DAY, YOUR WAY</span><span class="planner-spark">✳</span></div>
+            <h3 id="planner-title">Make a<br><em>little plan.</em></h3>
+            <p class="planner-lede">Collect a few places. We’ll help put them in a sensible order.</p>
+            <div class="planner-fields">
+              <label class="field-label" for="start-location">STARTING NEAR</label>
+              <div class="input-with-icon"><span class="pin-icon">⌖</span><select id="start-location"><option value="city" data-lat="12.8703" data-lng="74.843">Mangaluru city centre</option><option value="central" data-lat="12.863" data-lng="74.843">Mangaluru Central Station</option><option value="airport" data-lat="12.9613" data-lng="74.8901">Mangaluru Airport</option><option value="panambur" data-lat="12.948" data-lng="74.808">Panambur coast</option></select></div>
+              <div class="field-pair">
+                <label><span class="field-label">TRAVEL DATE</span><input id="trip-date" type="date"></label>
+                <label><span class="field-label">TIME TO EXPLORE</span><select id="trip-hours"><option value="3">3 hours</option><option value="5" selected>5 hours</option><option value="8">Full day</option></select></label>
+              </div>
+              <label class="field-label" for="travel-mode">GETTING AROUND</label>
+              <select id="travel-mode" class="mode-select"><option value="car">Car / taxi</option><option value="scooter">Scooter</option><option value="transit">Public transport</option><option value="walk">On foot</option></select>
+            </div>
+            <div class="selected-wrap">
+              <div class="selected-heading"><span>YOUR STOPS</span><span id="selected-count">0 / 6</span></div>
+              <div class="selected-list" id="selected-list"><div class="empty-selection"><span class="empty-plus">+</span><span>Add a place to start your route.</span></div></div>
+            </div>
+            <button class="primary-button generate-button" id="generate-route" disabled>Arrange my stops <span aria-hidden="true">↗</span></button>
+            <div class="planner-actions" id="planner-actions" hidden><button class="outline-button" id="save-itinerary">Save this day</button><button class="outline-button" id="share-trip">Share plan</button></div>
+            <div class="planner-footnote"><span class="footnote-symbol">ⓘ</span> Route order and travel times are estimates, not live directions.</div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="seasonal-band content-width" aria-labelledby="seasonal-title">
+        <div class="seasonal-graphic" aria-hidden="true"><span class="sun-ring"></span><span class="seasonal-wave wave-one"></span><span class="seasonal-wave wave-two"></span><span class="seasonal-number">06</span></div>
+        <div class="seasonal-content"><div class="eyebrow"><span class="eyebrow-line"></span> KEEP AN EYE ON THE SEASON</div><h2 id="seasonal-title">The monsoon<br>has its <em>own map.</em></h2><p>Waterfalls and greener trails can be beautiful after the rains. Conditions and access change, so check local advisories before setting out.</p><span class="seasonal-tag">SEASONAL INSPIRATION <i></i> CHECK ACCESS LOCALLY</span></div>
+        <div class="seasonal-image" role="img" aria-label="Rain clouds gathering over a lush coastal hillside"></div>
+      </section>
+
+      <section class="map-section content-width" id="map-section" aria-labelledby="map-title">
+        <div class="section-heading map-heading">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> A SENSE OF THE JOURNEY</div><h2 id="map-title">See how it <em>fits.</em></h2></div>
+          <p class="map-heading-copy">Your selected stops, together on one map. Add a place to see your route take shape.</p>
+        </div>
+        <div class="map-card">
+          <div class="map-canvas" id="map-canvas" role="img" aria-label="Illustrative map of Mangaluru and selected itinerary stops">
+            <svg class="route-map" id="route-map" viewBox="0 0 900 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><pattern id="mapGrid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#d4c4b5" stroke-width=".6" opacity=".62"/></pattern><filter id="mapShadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#31243c" flood-opacity=".17"/></filter></defs>
+              <rect width="900" height="480" fill="#f2e8da"/><rect width="900" height="480" fill="url(#mapGrid)"/>
+              <path class="map-water" d="M0 0h142c-20 38 6 62-18 96s-6 67-33 94 13 64-9 91-7 51-31 77 7 82-14 122H0z"/>
+              <path class="map-coastline" d="M142 0c-20 38 6 62-18 96s-6 67-33 94 13 64-9 91-7 51-31 77 7 82-14 122"/>
+              <path class="map-road" d="M192 458c23-73 74-102 111-143s49-75 74-114 65-70 106-78 68 16 91-14 52-64 89-89"/>
+              <path class="map-road secondary" d="M164 64c93 23 138 70 192 74s75-26 122-12 72 56 114 63 75-28 153-21"/>
+              <path class="map-road secondary" d="M237 460c20-51 18-115 1-172s-14-98 20-151 80-74 111-125"/>
+              <path class="map-river" d="M104 139c88-7 138 24 197 7s95-72 155-61 79 75 146 61 106-39 190-21"/>
+              <text class="map-label water-label" x="20" y="252">ARABIAN SEA</text><text class="map-label town-label" x="448" y="224">MANGALURU</text><text class="map-label small-label" x="318" y="88">KAVOOR</text><text class="map-label small-label" x="672" y="340">PILIKULA</text><text class="map-label small-label" x="185" y="395">ULLAL</text>
+              <g id="route-layer"></g>
+            </svg>
+            <div class="map-compass"><span>N</span><b>↑</b></div>
+            <div class="map-legend"><span><i class="legend-start"></i> START</span><span><i class="legend-stop"></i> YOUR STOPS</span><span><i class="legend-route"></i> SUGGESTED ORDER</span></div>
+          </div>
+          <div class="map-sidebar"><div class="map-side-top"><span class="map-kicker">YOUR COASTAL LOOP</span><span class="map-icon">↗</span></div><h3 id="map-route-title">A route is<br><em>waiting.</em></h3><p id="map-route-copy">Add a few places to your day and see how they connect.</p><div class="route-nearby" id="route-nearby" hidden><span class="nearby-heading">A LITTLE MORE NEARBY</span><div id="route-nearby-list"></div><span class="nearby-note">Editorial proximity suggestions · confirm road access locally.</span></div><div class="route-stats"><div><strong id="route-stop-stat">0</strong><span>STOPS</span></div><div><strong id="route-distance-stat">—</strong><span>APPROX. KM</span></div><div><strong id="route-time-stat">—</strong><span>EST. TRAVEL</span></div></div><button class="text-link map-plan-link" id="map-plan-link">Build your itinerary <span>↗</span></button><div class="map-disclaimer">Illustrative map · coordinate-based distance and time estimates, not road directions or live traffic.</div></div>
+        </div>
+      </section>
+
+      <section class="local-note content-width">
+        <div class="local-note-mark">R<span>.</span></div><p>GOOD TRIPS LEAVE ROOM<br>FOR A <em>LOCAL RECOMMENDATION.</em></p><span>ASK LOCALLY · TRAVEL LIGHTLY</span>
+      </section>
+
+      <footer class="site-footer content-width">
+        <div class="footer-top"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">Rout<span>ER</span><small>SMART LOCAL TOURISM PLANNER</small></span></a><p>Find a little more<br>in every place.</p><a class="footer-top-link" href="#top">BACK TO TOP ↑</a></div>
+        <div class="footer-bottom"><span>AN EARLY PILOT FOR MANGALURU, KARNATAKA</span><span>PHOTOS ARE ILLUSTRATIVE. PLACE DETAILS AND ACCESS CAN CHANGE; PLEASE VERIFY BEFORE YOU GO.</span><span>© ROUTER <span id="current-year"></span></span></div>
+      </footer>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="modal-backdrop" id="modal-backdrop" hidden>
+      <section class="destination-modal" id="destination-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" id="modal-close" aria-label="Close destination details">×</button>
+        <div class="modal-image" id="modal-image"><span class="illustrative-label modal-illustrative">ILLUSTRATIVE PHOTO</span></div>
+        <div class="modal-copy"><div class="modal-kicker" id="modal-kicker"></div><h2 id="modal-title"></h2><p id="modal-description"></p><div class="modal-facts" id="modal-facts"></div><div class="detail-note"><span>ⓘ</span><span>Opening hours and accessibility details are not verified in this pilot. Confirm with the attraction before travelling.</span></div><button class="primary-button" id="modal-add">Add to my day <span>↗</span></button></div>
+      </section>
+    </div>
+
+    <aside class="saved-drawer" id="saved-drawer" role="dialog" aria-modal="true" aria-labelledby="saved-title" aria-hidden="true" inert>
+      <div class="saved-drawer-head"><div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR TRAVEL NOTES</div><h2 id="saved-title">Saved <em>days.</em></h2></div><button class="modal-close" id="saved-close" aria-label="Close saved trips">×</button></div>
+      <div class="saved-list" id="saved-list"></div>
+      <div class="saved-drawer-foot">Trips are saved on this device. Share a link to take a plan with you.</div>
+    </aside>
+    <div class="drawer-shade" id="drawer-shade" hidden></div>
+    <div class="sr-only" id="live-region" aria-live="polite"></div>
+  </body>
+</html>
