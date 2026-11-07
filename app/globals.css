@@ -726,3 +726,27 @@ html { scroll-behavior: auto !important; }
   .story-scene { position: relative; inset: auto; min-height: 68vh; opacity: 1 !important; transform: none !important; }
   .scene-photo { transform: none !important; animation: none !important; }
 }
+
+/* Preloader: full-screen overlay shown before the first scroll. */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background: var(--peach);
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: clamp(40px, 8vw, 96px);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+#preloader-count {
+  font-variant-numeric: tabular-nums;
+}
+#preloader-pct {
+  opacity: 0.5;
+  font-size: 0.5em;
+  margin-left: 4px;
+}
